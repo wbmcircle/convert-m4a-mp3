@@ -28,6 +28,10 @@ const downloadFile = async (fileUrl, outputLocationPath) => {
   });
 };
 
+app.get('/', (req, res) => {
+  res.send('this is convert m4a to mp3');
+})
+
 // Endpoint to download, convert, and clean up
 app.post('/convert', async (req, res) => {
   const fileUrl = req.query.url; // Example: Input as a query parameter "?url=<url>"
